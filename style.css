@@ -1,0 +1,211 @@
+body {
+  box-sizing: border-box;
+  font-family: Arial, Gotham Pro;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: Gotham Pro;
+  src: url(./fonts/14078.ttf);
+}
+.container {
+  position: relative;
+  display: flex;
+  width: 310px;
+  height: 470px;
+  border: 1px solid #ddd;
+  margin: 20px auto;
+}
+.container__left {
+  width: 48px;
+}
+.container__right {
+  width: 260px;
+}
+.logo {
+  position: absolute;
+  top: 18px;
+  left: 143px;
+}
+.unit {
+  fill: none;
+  stroke-width: 1.2;
+}
+.unit:nth-child(5) {
+  stroke: #fad147;
+  stroke-dasharray: 12 100;
+}
+.unit:nth-child(4) {
+  stroke: #70a554;
+  stroke-dasharray: 31 100;
+  stroke-dashoffset: -12;
+}
+.unit:nth-child(3) {
+  stroke: #ebebeb;
+  stroke-dasharray: 26 100;
+  stroke-dashoffset: -43;
+}
+.unit:nth-child(1) {
+  stroke: white;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -69;
+}
+.unit:nth-child(2) {
+  stroke: #fad147;
+  stroke-dasharray: 20 100;
+  stroke-dashoffset: -80;
+}
+
+.loyalty__text {
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  text-align: center;
+}
+.loyalty__text p {
+  font-size: 11px;
+  color: #b5b0b1;
+}
+.loyalty__text p:nth-child(2) {
+  font-size: 21px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 6px;
+}
+.loyalty__text p:nth-child(3) {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fad147;
+}
+.loyalty__text p:nth-child(6) {
+  margin-bottom: 10px;
+}
+.loyalty__text span:last-child {
+  font-size: 16px;
+  color: #70a554;
+}
+.loyalty__text div {
+  display: flex;
+  justify-content: center;
+  font-family: Gotham Pro;
+}
+.loyalty__text div div {
+  flex-direction: column;
+}
+.percent__int {
+  font-size: 46px;
+}
+.percent__symbol {
+  color: #888;
+}
+.percent__float {
+  font-size: 24px;
+  line-height: 24px;
+}
+.categories {
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  left: 60px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.categories__text {
+  line-height: 18px;
+}
+.categories__text div:nth-child(2),
+div:nth-child(4) {
+  margin-bottom: 8px;
+  color: #9c9b9b;
+  text-align: right;
+}
+.categories__text div:last-child {
+  color: #9c9b9b;
+  text-align: right;
+}
+.categories__text img {
+  width: 11px;
+}
+.categories__diag > div {
+  position: relative;
+  width: 80px;
+  height: 30px;
+  background: #f9f9f9;
+  border: 2px solid#F1F0F1;
+  border-radius: 5px;
+  margin-left: 10px;
+  overflow: hidden;
+}
+.categories__diag > div:first-child {
+  margin-bottom: 10px;
+}
+.categories__diag > div:nth-child(2) {
+  margin-bottom: 10px;
+}
+.gauge_percent {
+  width: 0;
+  height: 23px;
+}
+.gauge_num {
+  width: 0;
+  height: 7px;
+}
+@keyframes promoters {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 30px;
+  }
+}
+@keyframes sceptics {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 50px;
+  }
+}
+@keyframes critics {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 70px;
+  }
+}
+.promoters_percent {
+  background-color: #70a554;
+  animation: promoters 5s linear 2s infinite alternate;
+}
+.promoters_num {
+  background-color: #b0cb9f;
+  animation: promoters 5s linear 1s infinite alternate;
+}
+.sceptics_percent {
+  background: #fad147;
+  animation: sceptics 5s linear 2s infinite alternate;
+}
+.sceptics_num {
+  background: #fae596;
+  animation: sceptics 5s linear 1s infinite alternate;
+}
+.critics_percent {
+  background: #eb5449;
+  animation: critics 5s linear 2s infinite alternate;
+}
+.critics_num {
+  background: #f2a59e;
+  animation: critics 5s linear 1s infinite alternate;
+}
+
+.categories__diag p {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 400;
+  color: #9c9b9b;
+  top: 8px;
+  left: 40px;
+}
